@@ -1,3 +1,4 @@
+cat > .github/workflows/ci_114062615.yaml << 'EOF'
 name: CI - 114062615
 
 on:
@@ -30,7 +31,7 @@ jobs:
         run: npm run format:check
 
       - name: Run tests
-        run: npm run test -- --reporter=verbose --reporter=junit --outputFile=test-results/junit.xml
+        run: npm run test -- --reporter=default --reporter=junit --outputFile.junit=test-results/junit.xml
 
       - name: Upload test results artifact
         if: always()
@@ -46,3 +47,4 @@ jobs:
           name: Vitest Results
           path: test-results/junit.xml
           reporter: jest-junit
+EOF
