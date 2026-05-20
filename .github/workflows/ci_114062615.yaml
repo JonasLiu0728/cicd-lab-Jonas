@@ -1,4 +1,3 @@
-cat > .github/workflows/ci_114062615.yaml << 'EOF'
 name: CI - 114062615
 
 on:
@@ -47,4 +46,3 @@ jobs:
           name: Vitest Results
           path: test-results/junit.xml
           reporter: jest-junit
-EOF
