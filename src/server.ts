@@ -15,3 +15,4 @@ async function start() {
 }
 
 void start();
+const x={a:1,b:2}
